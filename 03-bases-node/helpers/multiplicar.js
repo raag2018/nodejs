@@ -1,11 +1,11 @@
 const fs = require('fs');
-const crearArchivo = (base = 5){
+const crearArchivo = (base = 5) => {
 	console.log('================================');
 	console.log(`	TABLA DEL `, base );
 	console.log('================================');
 	let salida = '';
 	for (let i = 1; i <= 10; i++) {
-		salida += `${base} x ${i} = ${n*i} \n`;
+		salida += `${base} x ${i} = ${base*i} \n`;
 	}
 	console.log(salida);
 	//fs.writeFile(`tabla-${n}.txt`, salida, (err) => {
