@@ -1,6 +1,6 @@
 const fs = require('fs');
+let salida = '';
 const crearArchivo = (base = 5) => {
-	let salida = '';
 	salida += '================================';
 	salida += `	TABLA DEL `+ base ;
 	salida += '================================';
