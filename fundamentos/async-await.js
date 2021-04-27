@@ -23,16 +23,8 @@ const salarios = [
 	}
 ];
 const getEmpleado = (id) => {
-	
 	const promesa = new Promise((resolve, reject) => {
 		const empleado = empleados.find((e) =>  e.id === id);
-			/*if(empleado){
-				resolve(empleado.nombre);
-			}else{
-				reject(`Empleado con id ${id} no existe`);
-			}
-			IF TERNARIO
-			*/
 			(empleado)
 			? resolve(empleado.nombre)
 			: reject(`Empleado con id ${id} no existe`);
@@ -48,18 +40,13 @@ const getSalario = (id) => {
 	});
 	return promesa;
 }
-const id = 3;
-let nombre;
-//getEmpleado(id)
-//	.then(empleado => console.log(empleado))
-//	.catch(err => console.log(err));
-//getSalario(id)
-//	.then(salario => console.log(salario))
-//	.catch(err => console.log(err));
-getEmpleado(id)
-	.then(empleado => {
-		nombre = empleado;
-		return getSalario(id)
-	})
-	.then(salario => console.log('El empleado: ', nombre, ' tiene un salario de ',salario))
-	.catch(err => console.log(err));
+
+const getInfoUsuario = async(id) => {
+	const empleado = await getEmpleado(id);
+	const salario = await getSalario(id);
+	return `El salario del empleado: ${empleado} es de ${salario}`;
+}
+const id = 1;
+getInfoUsuario(id)
+	.then(msg => console.log(msg));
+
