@@ -1,4 +1,4 @@
-const {crearArchivo} = require('./helpers/multiplicar');
+const {getMultiplicacion} = require('./helpers/multiplicar');
 console.clear();
 const n = 3;
 getMultiplicacion(n)
