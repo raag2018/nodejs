@@ -1,9 +1,9 @@
 const fs = require('fs');
 const crearArchivo = async(base = 5) => {
 	let salida = '';
-	salida += '================================';
-	salida += `	TABLA DEL `+ base ;
-	salida += '================================';
+	salida += '================================ \n';
+	salida += `	TABLA DEL `+ base + '\n';
+	salida += '================================ \n';
 	for (let i = 1; i <= 10; i++) {
 		salida += `${base} x ${i} = ${base*i} \n`;
 	}
