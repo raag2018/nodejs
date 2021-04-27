@@ -29,5 +29,5 @@ const getMultiplicacion = async(base) => {
 	}
 }
 module.exports = {
-	crearArchivo
+	getMultiplicacion
 }
