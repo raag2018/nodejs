@@ -1,0 +1,7 @@
+#
+#git ignore node_mudules de 03-bases-node
+#
+/03-bases-node/node_modules/
+#modulos de node ignorados
+#colors
+#yargs

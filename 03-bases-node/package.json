@@ -1,0 +1,23 @@
+{
+  "name": "03-bases-node",
+  "version": "0.0.1",
+  "description": "Tablas de multiplicar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/raag2018/nodejs.git"
+  },
+  "author": "Roberto Antonio Alferes Gomez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raag2018/nodejs/issues"
+  },
+  "homepage": "https://github.com/raag2018/nodejs#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^17.0.0"
+  }
+}
