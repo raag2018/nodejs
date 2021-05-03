@@ -7,4 +7,5 @@
 #yargs
 ############################
 #ignorar archivos .txt de las tablas
-/03-bases-node/salida/*.txt
+*.txt
+/04-tareas-hacer/node_modules/
