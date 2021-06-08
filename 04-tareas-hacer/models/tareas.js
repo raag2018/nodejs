@@ -5,8 +5,10 @@ class Tareas{
 		this._listado = {};
 	}
 	borrarTarea(id = ''){
-		if(this._listado[id]){
-			delete this._listado[id];
+		//console.log(id.id);
+		//console.log(this._listado['9dcd5b00-a85d-47a4-aaca-b4775618890f']);
+		if(this._listado.hasOwnProperty(id.id)){
+			delete this._listado[id.id];
 		}
 	}
 	crearTarea(desc = ''){
