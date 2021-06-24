@@ -6,13 +6,9 @@ const preguntas = [
 		"name": 'opcion',
 		"message": 'Que desea hacer?',
 		"choices": [	 
-					{value: '1',name:`${'1.'.blue}  Crear Tareas `},
-					{value: '2',name:`${'2.'.blue}  Listar Tareas `},
-					{value: '3',name:`${'3.'.blue}  Listar tareas completadas`},
-					{value: '4',name:`${'4.'.blue}  Listar tareas pendientes`},
-					{value: '5',name:`${'5.'.blue}  Completar tarea(s)`},
-					{value: '6',name:`${'6.'.blue}  Borrar tarea`},
-					{value: '0',name:`${'0.'.blue}  Salir`}
+					{value: 1,name:`${'1.'.blue}  Buscar  `},
+					{value: 2,name:`${'2.'.blue}  Historial `},
+					{value: 0,name:`${'3.'.blue}  Salir`}
 				]
 	}
 ];

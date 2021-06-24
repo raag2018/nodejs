@@ -9,3 +9,4 @@
 #ignorar archivos .txt de las tablas
 *.txt
 /04-tareas-hacer/node_modules/
+/05-clima-app/node_modules/
