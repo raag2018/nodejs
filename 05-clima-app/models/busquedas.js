@@ -1,16 +1,30 @@
+require('dotenv').config();
 const axios = require('axios');
 class Busquedas{
 	historial = ['Tegucigalpa', 'Madrid', 'San Jose'];
 	constructor(){
 		//leer db si existe
 	}
+	get paramsMapbox(){
+		return {
+					'access_token': process.env.MAPBOX_KEY,
+					'limit': 5,
+					'language': 'es'
+				}
+	} 
 	async ciudad(lugar = ''){
 		try{
-			//peticion http
-			//console.log('Ciudad',lugar);
-			const res = await axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/san%20salvador.json?access_token=pk.eyJ1IjoiYW50b255YWxmZXJlcyIsImEiOiJja3FiYmEzN2MwMGdnMnJsNDZ4cWlpbm90In0.NTpMu3yz2KCKcB6zLtIo9w&limit=5&language=es');
-			console.log(res.data);
-			return []; 
+			const instance = axios.create({
+				baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${lugar}.json`,
+				params: this.paramsMapbox
+			});
+			const resp = await instance.get();
+			return resp.data.features.map(lugar => ({
+				id: lugar.id,
+				nombre: lugar.place_name,
+				lng: lugar.center[0],
+				lat: lugar.center[1]
+			})); 
 		}catch(error){
 			return [];
 		}

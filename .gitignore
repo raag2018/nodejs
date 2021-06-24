@@ -8,5 +8,7 @@
 ############################
 #ignorar archivos .txt de las tablas
 *.txt
+#ignorar todas las variables de entorno
+*.env
 /04-tareas-hacer/node_modules/
 /05-clima-app/node_modules/
