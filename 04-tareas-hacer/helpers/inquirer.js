@@ -16,9 +16,10 @@ const preguntas = [
 				]
 	}
 ];
-let msg = '';
+
 const inquirerMenu = async() => {
 	console.clear();
+	let msg = '';
 	msg += "====================================== \n".green;
 	msg += '	Seleccione una opcion \n'.green;
 	msg += '====================================== \n'.green;
